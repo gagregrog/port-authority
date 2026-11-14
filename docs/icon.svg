@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256" role="img" aria-label="Port Authority icon: an anchor">
+  <title>Port Authority</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#22262b"/>
+      <stop offset="1" stop-color="#141618"/>
+    </linearGradient>
+  </defs>
+  <rect width="256" height="256" fill="url(#bg)"/>
+  <!-- Anchor, after Lucide's anchor icon (ISC license) -->
+  <g transform="translate(40 36) scale(7.33)" fill="none" stroke="#6fcf97" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 22V8"/>
+    <path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
+    <circle cx="12" cy="5" r="3"/>
+  </g>
+</svg>

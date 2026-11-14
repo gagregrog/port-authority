@@ -1,0 +1,187 @@
+{
+  "manifestVersion": 2,
+  "id": "port-authority",
+  "name": "Port Authority",
+  "version": "0.1.0",
+  "description": "Shows which worktree runs the process on each configured port, in the status bar and, if you turn it on, as an icon on the worktree's title.",
+  "icon": "docs/icon.png",
+  "cover": {
+    "path": "docs/cover.png",
+    "alt": "Illustration of Orca with Port Authority: an icon before each worktree that runs a service, and one status bar item per service that opens its worktree."
+  },
+  "engines": {
+    "orca": ">=1.4.257"
+  },
+  "execution": "trusted-worker",
+  "pluginApi": 1,
+  "main": "src/worker.ts",
+  "capabilities": [
+    {
+      "kind": "storage:own"
+    },
+    {
+      "kind": "settings:own"
+    },
+    {
+      "kind": "workspace:read"
+    },
+    {
+      "kind": "workspace:write"
+    }
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "id": "port-authority.refresh",
+        "title": "Port Authority: Refresh"
+      },
+      {
+        "id": "port-authority.open1",
+        "title": "Port Authority: Open service 1 worktree"
+      },
+      {
+        "id": "port-authority.open2",
+        "title": "Port Authority: Open service 2 worktree"
+      },
+      {
+        "id": "port-authority.open3",
+        "title": "Port Authority: Open service 3 worktree"
+      },
+      {
+        "id": "port-authority.open4",
+        "title": "Port Authority: Open service 4 worktree"
+      },
+      {
+        "id": "port-authority.open5",
+        "title": "Port Authority: Open service 5 worktree"
+      },
+      {
+        "id": "port-authority.open6",
+        "title": "Port Authority: Open service 6 worktree"
+      }
+    ],
+    "statusBarItems": [
+      {
+        "id": "slot1",
+        "text": "",
+        "icon": "layers",
+        "tooltip": "Which worktree runs this port",
+        "command": "port-authority.open1"
+      },
+      {
+        "id": "slot2",
+        "text": "",
+        "icon": "layers",
+        "tooltip": "Which worktree runs this port",
+        "command": "port-authority.open2"
+      },
+      {
+        "id": "slot3",
+        "text": "",
+        "icon": "layers",
+        "tooltip": "Which worktree runs this port",
+        "command": "port-authority.open3"
+      },
+      {
+        "id": "slot4",
+        "text": "",
+        "icon": "layers",
+        "tooltip": "Which worktree runs this port",
+        "command": "port-authority.open4"
+      },
+      {
+        "id": "slot5",
+        "text": "",
+        "icon": "layers",
+        "tooltip": "Which worktree runs this port",
+        "command": "port-authority.open5"
+      },
+      {
+        "id": "slot6",
+        "text": "",
+        "icon": "layers",
+        "tooltip": "Which worktree runs this port",
+        "command": "port-authority.open6"
+      }
+    ],
+    "settings": [
+      {
+        "key": "services",
+        "title": "Services",
+        "description": "One per line: label=port. A leading emoji in the label is the icon on the worktree title. Lines starting with # are skipped. At most 6.",
+        "type": "string",
+        "multiline": true,
+        "default": "🗄️ backend=8080\n🖥️ frontend=8000"
+      },
+      {
+        "key": "stackLabel",
+        "title": "Stack label",
+        "description": "Label for a worktree that runs every service; its leading emoji goes on the title. Empty shows each service's icon instead.",
+        "type": "string",
+        "default": "🛠️ stack"
+      },
+      {
+        "key": "markTitles",
+        "title": "Mark worktree titles",
+        "description": "Put the service icons before the owning worktree's title, and restore the title when the service stops. Setting a title fixes Orca's display name, so a name that followed the branch stops following it. Turn this off before you uninstall, so the plugin removes its icons.",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "key": "showStatusBar",
+        "title": "Show status bar items",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "key": "statusIcon",
+        "title": "Status bar icon",
+        "type": "string",
+        "default": "layers",
+        "enum": [
+          "layers",
+          "activity",
+          "gauge",
+          "globe",
+          "rocket",
+          "zap",
+          "code",
+          "terminal",
+          "database",
+          "cloud",
+          "plug",
+          "flag",
+          "star",
+          "branch"
+        ]
+      },
+      {
+        "key": "downText",
+        "title": "Text for a stopped service",
+        "type": "string",
+        "default": "down"
+      },
+      {
+        "key": "allDownText",
+        "title": "Text when every service is stopped",
+        "type": "string",
+        "default": "stack down"
+      },
+      {
+        "key": "otherSuffix",
+        "title": "Suffix for a port held outside every Orca workspace",
+        "description": "Shown after the process name. Empty shows the name only.",
+        "type": "string",
+        "default": "(outside Orca)"
+      },
+      {
+        "key": "intervalSeconds",
+        "title": "Poll interval (seconds)",
+        "type": "integer",
+        "default": 5,
+        "minimum": 2,
+        "maximum": 60
+      }
+    ]
+  }
+}

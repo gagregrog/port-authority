@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 800 500" role="img" aria-label="Illustration of Orca with Port Authority">
+  <title>Port Authority (illustration)</title>
+  <defs>
+    <symbol id="layers" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/>
+      <path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/>
+      <path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+    </symbol>
+    <symbol id="branch" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="6" x2="6" y1="3" y2="15"/>
+      <circle cx="18" cy="6" r="3"/>
+      <circle cx="6" cy="18" r="3"/>
+      <path d="M18 9a9 9 0 0 1-9 9"/>
+    </symbol>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0 10 5 0 10z" fill="#8ab4ff"/>
+    </marker>
+  </defs>
+
+  <g font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Inter, Roboto, sans-serif">
+    <rect width="800" height="500" fill="#141414"/>
+
+    <!-- Sidebar -->
+    <rect width="250" height="466" fill="#191919"/>
+    <line x1="250" y1="0" x2="250" y2="466" stroke="#2a2a2a"/>
+    <text x="18" y="34" fill="#7a7a7a" font-size="11" font-weight="600" letter-spacing="0.8">SHOP-APP</text>
+    <g font-size="13.5">
+      <use href="#branch" x="18" y="58" width="14" height="14" color="#6b6b6b"/>
+      <text x="40" y="70" fill="#d4d4d4">main</text>
+
+      <rect x="8" y="91" width="234" height="34" rx="6" fill="#262626"/>
+      <use href="#branch" x="18" y="101" width="14" height="14" color="#8a8a8a"/>
+      <text x="40" y="113" fill="#f2f2f2">🗄 billing-api</text>
+
+      <use href="#branch" x="18" y="140" width="14" height="14" color="#6b6b6b"/>
+      <text x="40" y="152" fill="#d4d4d4">🖥 checkout-redesign</text>
+
+      <use href="#branch" x="18" y="179" width="14" height="14" color="#6b6b6b"/>
+      <text x="40" y="191" fill="#d4d4d4">search-tuning</text>
+
+      <use href="#branch" x="18" y="218" width="14" height="14" color="#6b6b6b"/>
+      <text x="40" y="230" fill="#d4d4d4">docs-refresh</text>
+
+      <use href="#branch" x="18" y="257" width="14" height="14" color="#6b6b6b"/>
+      <text x="40" y="269" fill="#d4d4d4">onboarding-copy</text>
+    </g>
+
+    <!-- Title -->
+    <text x="290" y="88" fill="#f2f2f2" font-size="34" font-weight="700">Port Authority</text>
+    <text x="290" y="118" fill="#a8a8a8" font-size="15.5">See which worktree runs each local service.</text>
+
+    <!-- Terminal in the selected worktree -->
+    <rect x="290" y="146" width="470" height="104" rx="8" fill="#101010" stroke="#2a2a2a"/>
+    <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="12.5">
+      <text x="308" y="176" fill="#7a7a7a">~/shop-app/billing-api</text>
+      <text x="308" y="202" fill="#d4d4d4"><tspan fill="#7ee2a8">$</tspan> go run ./cmd/api</text>
+      <text x="308" y="226" fill="#9a9a9a">listening on :8080</text>
+    </g>
+
+    <!-- Notes -->
+    <g font-size="13" fill="#8ab4ff">
+      <text x="296" y="292">The worktree that runs a service</text>
+      <text x="296" y="310">gets its icon on the title.</text>
+      <path d="M288 296 C 266 288, 268 172, 226 152" fill="none" stroke="#8ab4ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+
+      <text x="470" y="384">Press an item to open its worktree.</text>
+      <path d="M600 394 C 600 420, 600 436, 600 458" fill="none" stroke="#8ab4ff" stroke-width="1.5" marker-end="url(#arrow)"/>
+    </g>
+
+    <!-- Status bar -->
+    <rect x="0" y="466" width="800" height="34" fill="#1c1c1c"/>
+    <line x1="0" y1="466" x2="800" y2="466" stroke="#2a2a2a"/>
+    <g font-size="12.5">
+      <use href="#branch" x="14" y="476" width="13" height="13" color="#8a8a8a"/>
+      <text x="33" y="487" fill="#a8a8a8">billing-api</text>
+      <circle cx="124" cy="483" r="3.5" fill="none" stroke="#8a8a8a" stroke-width="1.5"/>
+      <text x="134" y="487" fill="#a8a8a8">2 agents</text>
+
+      <use href="#layers" x="296" y="476" width="14" height="14" color="#6fcf97"/>
+      <text x="315" y="487" fill="#d6d6d6">🗄️ backend: billing-api</text>
+
+      <use href="#layers" x="510" y="476" width="14" height="14" color="#6fcf97"/>
+      <text x="529" y="487" fill="#d6d6d6">🖥️ frontend: checkout-redesign</text>
+    </g>
+  </g>
+</svg>
